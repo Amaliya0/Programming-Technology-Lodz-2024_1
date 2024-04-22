@@ -16,9 +16,9 @@ namespace Warehouse
             Console.WriteLine("Product A id:" + idOfProductA);
             Console.WriteLine("Product B id:" + idOfProductB);
 
-            Person staffMember = new Person { FirstName = "John", LastName = "Hendricks", Id = 1 };
-            Person customer = new Person { FirstName = "Alice", LastName = "Murphy", Id = 2 };
-            Person supplier = new Person { FirstName = "Bob", LastName = "Moyer", Id = 3 };
+            Staff staffMember = new Staff ("John", "Hendricks", 1);
+            Customer customer = new Customer ("Alice", "Murphy", 2);
+            Supplier supplier = new Supplier ("Bob", "Moyer", 3);
 
             warehouseData.Staff.Add(staffMember);
             warehouseData.Customers.Add(customer);

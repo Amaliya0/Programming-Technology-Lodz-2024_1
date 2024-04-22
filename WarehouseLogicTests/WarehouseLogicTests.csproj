@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Warehouse_Data_layer\WarehouseData.csproj" />
-    <ProjectReference Include="..\Warehouse_Logic_layer\WarehouseLogic.csproj" />
+    <ProjectReference Include="..\Warehouse_Data_layer\WarehouseDataLayer.csproj" />
+    <ProjectReference Include="..\Warehouse_Logic_layer\WarehouseLogicLayer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
