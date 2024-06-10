@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2Project.Data", "PTProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Project.Service", "PTProject.Service\Task2Project.Service.csproj", "{EB62170C-0951-44AF-8E24-1BA5BB91CB16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTProject.ViewModelsTest", "PTProject.ViewModelsTest\PTProject.ViewModelsTest.csproj", "{DB7071C9-12B5-4FC4-9597-9D17F7191769}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Project.ViewModelsTest", "PTProject.ViewModelsTest\Task2Project.ViewModelsTest.csproj", "{DB7071C9-12B5-4FC4-9597-9D17F7191769}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Project.Presentation", "PTProject.Presentation\Task2Project.Presentation.csproj", "{E8B7617F-BE19-4885-8297-E68135BD7AD7}"
 EndProject
