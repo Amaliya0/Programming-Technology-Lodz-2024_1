@@ -1,15 +1,8 @@
-# Programming-Technology-Lodz-2024
-
 # Programming Technology Lab
-
-
-## Task 2 - Graphical data
-
-Warehouse Business process
 
 ## Team
 
 | Name Surname (initials) | GUID                                     |
 | ----------------------- | ---------------------------------------- |
-| Amaliya Aijan           | `{ED57FC8C-0FA0-4A19-A799-47985D8B48C7}` |
-| Vladislav Sevtsenko     | `{5A531362-1826-4759-A937-6F7D8A1C5AA9}` |
+| AM                      | `{c22428e7-d4cd-445e-8bbb-89eb71fd1d4b}` |
+| CG                      | `{9e71ed08-b4af-4dd6-8fdc-ab377fe0404c}` |

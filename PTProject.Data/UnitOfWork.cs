@@ -1,0 +1,88 @@
+﻿using System;
+
+namespace Task2Project.Data
+{
+    public class UnitOfWork : IUnitOfWork
+    {
+        private readonly Task2ProjectDataContext _context;
+        private IRepository<User> _userRepository;
+        private IRepository<Good> _goodRepository;
+        private IRepository<Events> _eventRepository;
+        private IRepository<ProcessState> _processStateRepository;
+
+        public UnitOfWork(Task2ProjectDataContext context)
+        {
+            _context = context;
+            _context.Log = Console.Out;
+        }
+
+        public IRepository<User> UserRepository
+        {
+            get
+            {
+                if (_userRepository == null)
+                {
+                    _userRepository = new Repository<User>(_context);
+                }
+                return _userRepository;
+            }
+        }
+
+        public IRepository<Good> GoodRepository
+        {
+            get
+            {
+                if (_goodRepository == null)
+                {
+                    _goodRepository = new Repository<Good>(_context);
+                }
+                return _goodRepository;
+            }
+        }
+
+        public IRepository<Events> EventRepository
+        {
+            get
+            {
+                if (_eventRepository == null)
+                {
+                    _eventRepository = new Repository<Events>(_context);
+                }
+                return _eventRepository;
+            }
+        }
+
+        public IRepository<ProcessState> ProcessStateRepository
+        {
+            get
+            {
+                if (_processStateRepository == null)
+                {
+                    _processStateRepository = new Repository<ProcessState>(_context);
+                }
+                return _processStateRepository;
+            }
+        }
+
+        public void Save()
+        {
+            try
+            {
+                _context.SubmitChanges();
+                Console.WriteLine("Changes saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error saving changes: " + ex.Message);
+                throw;
+            }
+        }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
+    }
+
+}
+
