@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace Task2Project.Data
+namespace PTProject.Data
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Task2ProjectDataContext _context;
+        private readonly PTProjectDataContext _context;
         private IRepository<User> _userRepository;
         private IRepository<Good> _goodRepository;
         private IRepository<Events> _eventRepository;
         private IRepository<ProcessState> _processStateRepository;
 
-        public UnitOfWork(Task2ProjectDataContext context)
+        public UnitOfWork(PTProjectDataContext context)
         {
             _context = context;
             _context.Log = Console.Out;

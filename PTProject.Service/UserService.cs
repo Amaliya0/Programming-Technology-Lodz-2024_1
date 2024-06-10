@@ -1,8 +1,8 @@
-﻿using Task2Project.Data;
+﻿using PTProject.Data;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Task2Project.Service
+namespace PTProject.Service
 {
     public class UserService : IUserService
     {
@@ -36,12 +36,14 @@ namespace Task2Project.Service
             _unitOfWork.Save();
         }
 
+        // Read
         public UserDTO GetUser(int id)
         {
             User User = _unitOfWork.UserRepository.GetById(id);
             return User != null ? MapToDTO(User) : null;
         }
 
+        // Update
         public void UpdateUser(UserDTO userDTO)
         {
             User User = MapToEntity(userDTO);
@@ -49,6 +51,7 @@ namespace Task2Project.Service
             _unitOfWork.Save();
         }
 
+        // Delete
         public void DeleteUser(int id)
         {
             User User = _unitOfWork.UserRepository.GetById(id);

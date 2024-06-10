@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task2Project.Data
+namespace PTProject.Data
 {
     public interface IUnitOfWork : IDisposable
     {

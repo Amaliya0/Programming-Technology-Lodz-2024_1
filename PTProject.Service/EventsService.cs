@@ -1,6 +1,6 @@
-﻿using Task2Project.Data;
+﻿using PTProject.Data;
 
-namespace Task2Project.Service
+namespace PTProject.Service
 {
     public class EventsService
     {
@@ -11,17 +11,20 @@ namespace Task2Project.Service
             _unitOfWork = unitOfWork;
         }
 
+        // Create
         public void AddEvent(Events evt)
         {
             _unitOfWork.EventRepository.Add(evt);
             _unitOfWork.Save();
         }
 
+        // Read
         public Events GetEvent(int id)
         {
             return _unitOfWork.EventRepository.GetById(id);
         }
 
+        // Delete
         public void DeleteEvent(int id)
         {
             Events evt = _unitOfWork.EventRepository.GetById(id);

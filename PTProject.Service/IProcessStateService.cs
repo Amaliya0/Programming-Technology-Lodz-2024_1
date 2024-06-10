@@ -1,6 +1,6 @@
-﻿using Task2Project.Data;
+﻿using PTProject.Data;
 
-namespace Task2Project.Service
+namespace PTProject.Service
 {
     public interface IProcessStateService
     {

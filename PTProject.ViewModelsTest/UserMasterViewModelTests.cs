@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Task2Project.Presentation.ViewModels;
-using Task2Project.Presentation.Models;
+using PTProject.Presentation.ViewModels;
+using PTProject.Presentation.Models;
 using System.Linq;
 using System;
 
-namespace Task2Project.ViewModelsTest
+namespace PTProject.ViewModelsTest
 {
     [TestClass]
     public class UserMasterViewModelTests

@@ -2,14 +2,14 @@
 using System.Data.Linq;
 using System.Linq;
 
-namespace Task2Project.Data
+namespace PTProject.Data
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly Task2ProjectDataContext _context;
+        private readonly PTProjectDataContext _context;
         private readonly Table<T> _table;
 
-        public Repository(Task2ProjectDataContext context)
+        public Repository(PTProjectDataContext context)
         {
             _context = context;
             _table = _context.GetTable<T>();

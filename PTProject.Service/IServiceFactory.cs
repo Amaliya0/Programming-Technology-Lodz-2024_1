@@ -1,5 +1,5 @@
 ﻿
-namespace Task2Project.Service
+namespace PTProject.Service
 {
     public interface IServiceFactory
     {

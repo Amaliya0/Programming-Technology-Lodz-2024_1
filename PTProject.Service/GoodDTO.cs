@@ -1,4 +1,4 @@
-﻿namespace Task2Project.Service
+﻿namespace PTProject.Service
 {
     public class GoodDTO
     {

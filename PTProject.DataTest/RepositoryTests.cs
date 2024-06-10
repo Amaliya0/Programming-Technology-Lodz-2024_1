@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using Task2Project.Data;
+using PTProject.Data;
 
-namespace Task2Project.DataTest
+namespace PTProject.DataTest
 {
     [TestClass]
     public class RepositoryTests
@@ -20,13 +20,16 @@ namespace Task2Project.DataTest
         [TestMethod]
         public void TestGetAllUsers()
         {
-            var user1 = new User { Id = 1, UserName = "Vlad" };
-            var user2 = new User { Id = 2, UserName = "Amaliya" };
+            // Arrange
+            var user1 = new User { Id = 1, UserName = "User1" };
+            var user2 = new User { Id = 2, UserName = "User2" };
             _userRepository.Add(user1);
             _userRepository.Add(user2);
 
+            // Act
             var users = _userRepository.GetAll();
 
+            // Assert
             Assert.AreEqual(2, users.Count());
             Assert.AreEqual(user1, users.First());
             Assert.AreEqual(user2, users.Last());

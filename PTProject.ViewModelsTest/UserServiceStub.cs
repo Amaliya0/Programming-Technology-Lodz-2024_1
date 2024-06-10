@@ -1,8 +1,8 @@
-﻿using Task2Project.Service;
+﻿using PTProject.Service;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Task2Project.ViewModelsTest
+namespace PTProject.ViewModelsTest
 {
     public class UserServiceStub : IUserService
     {

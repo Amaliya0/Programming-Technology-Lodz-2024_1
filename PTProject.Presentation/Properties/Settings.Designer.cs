@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Task2Project.Presentations.Properties
+namespace PTProject.Presentations.Properties
 {
 
 

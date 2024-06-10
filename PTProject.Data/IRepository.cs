@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Task2Project.Data
+namespace PTProject.Data
 {
     public interface IRepository<T> where T : class
     {
