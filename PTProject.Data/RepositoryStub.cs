@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace PTProject.Data
+namespace Task2Project.Data
 {
     public class RepositoryStub<T> : IRepository<T> where T : class
     {

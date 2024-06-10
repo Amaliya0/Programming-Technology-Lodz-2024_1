@@ -1,8 +1,8 @@
-﻿using PTProject.Data;
+﻿using Task2Project.Data;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PTProject.Service
+namespace Task2Project.Service
 {
     public class GoodService : IGoodService
     {

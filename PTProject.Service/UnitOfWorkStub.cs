@@ -1,7 +1,7 @@
-﻿using PTProject.Data;
+﻿using Task2Project.Data;
 
 
-namespace PTProject.Service
+namespace Task2Project.Service
 {
     public class UnitOfWorkStub : IUnitOfWork
     {

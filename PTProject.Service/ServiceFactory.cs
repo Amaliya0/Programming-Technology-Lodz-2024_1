@@ -1,17 +1,17 @@
-﻿using PTProject.Data;
+﻿using Task2Project.Data;
 
-namespace PTProject.Service
+namespace Task2Project.Service
 {
     public class ServiceFactory : IServiceFactory
     {
         private readonly string _connectionString;
-        private PTProjectDataContext _context;
+        private Task2ProjectDataContext _context;
         private IUnitOfWork _unitOfWork;
 
         public ServiceFactory(string connectionString)
         {
             _connectionString = connectionString;
-            _context = new PTProjectDataContext(_connectionString);
+            _context = new Task2ProjectDataContext(_connectionString);
             _unitOfWork = new UnitOfWork(_context);
         }
 

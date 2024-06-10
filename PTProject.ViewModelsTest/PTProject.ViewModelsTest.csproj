@@ -57,13 +57,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PTProject.Presentation\PTProject.Presentation.csproj">
+    <ProjectReference Include="..\PTProject.Presentation\Task2Project.Presentation.csproj">
       <Project>{e8b7617f-be19-4885-8297-e68135bd7ad7}</Project>
-      <Name>PTProject.Presentation</Name>
+      <Name>Task2Project.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PTProject.Service\PTProject.Service.csproj">
+    <ProjectReference Include="..\PTProject.Service\Task2Project.Service.csproj">
       <Project>{eb62170c-0951-44af-8e24-1ba5bb91cb16}</Project>
-      <Name>PTProject.Service</Name>
+      <Name>Task2Project.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

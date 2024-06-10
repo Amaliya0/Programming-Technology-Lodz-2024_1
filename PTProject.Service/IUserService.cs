@@ -1,7 +1,7 @@
-﻿using PTProject.Data;
+﻿using Task2Project.Data;
 using System.Collections.Generic;
 
-namespace PTProject.Service
+namespace Task2Project.Service
 {
     public interface IUserService
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PTProject.Service;
+using Task2Project.Service;
 
-namespace PTProject.ServiceTest
+namespace Task2Project.ServiceTest
 {
     [TestClass]
     public class UserServiceTests

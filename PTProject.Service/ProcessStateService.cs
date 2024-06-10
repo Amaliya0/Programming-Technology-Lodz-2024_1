@@ -1,7 +1,7 @@
-﻿using PTProject.Data;
+﻿using Task2Project.Data;
 using System;
 
-namespace PTProject.Service
+namespace Task2Project.Service
 {
     public class ProcessStateService : IProcessStateService
     {
@@ -14,31 +14,26 @@ namespace PTProject.Service
             _goodService = goodService;
         }
 
-        // Create
         public void AddProcessState(ProcessState processState)
         {
             _unitOfWork.ProcessStateRepository.Add(processState);
             _unitOfWork.Save();
         }
 
-        // Read
         public ProcessState GetProcessState(int id)
         {
             return _unitOfWork.ProcessStateRepository.GetById(id);
         }
 
-        // Update
         public void UpdateProcessState(ProcessState updatedProcessState, string eventType)
         {
             ProcessState processState = _unitOfWork.ProcessStateRepository.GetById(updatedProcessState.Id);
             if (processState != null)
             {
-                // Get the associated Good
                 Good good = _unitOfWork.GoodRepository.GetById(processState.Id);
 
                 if (good != null)
                 {
-                    // Adjust the description and create the event based on the event type
                     if (eventType == "Purchase")
                     {
                         if (_goodService.GetGoodById(good.Id) != null)
@@ -46,7 +41,6 @@ namespace PTProject.Service
                             processState.Description = "Buy";
                             CreateEvent(updatedProcessState, "Purchase");
 
-                            // Remove the Good from the Catalog
                             _unitOfWork.GoodRepository.Delete(good);
                         }
                         else
@@ -59,7 +53,6 @@ namespace PTProject.Service
                         processState.Description = "Stock";
                         CreateEvent(updatedProcessState, "Return");
 
-                        // Add a new Good to the Catalog
                         Good newGood = new Good
                         {
 
@@ -78,19 +71,16 @@ namespace PTProject.Service
 
         private void CreateEvent(ProcessState processState, string eventType)
         {
-            // Create a new event
             Events evt = new Events
             {
                 Description = $"ProcessState with ID {processState.Id} was updated to {eventType}",
                 EventType = eventType,
             };
 
-            // Use the EventsService to add the new event
             EventsService eventsService = new EventsService(_unitOfWork);
             eventsService.AddEvent(evt);
         }
 
-        // Delete
         public void DeleteProcessState(int id)
         {
             ProcessState processState = _unitOfWork.ProcessStateRepository.GetById(id);
